@@ -36,7 +36,8 @@ def YesPlease(emailAddress, Password):
     webdriver.find_element_by_xpath("//body/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/button[1]").click()
     time.sleep(5)
     webdriver.find_element_by_xpath("//a[contains(text(),'AFREKENEN')]").click()
-    
+    time.sleep(5)
+
     
         
     

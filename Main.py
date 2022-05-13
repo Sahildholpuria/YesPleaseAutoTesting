@@ -1,6 +1,6 @@
 import CreateAccount
 import YesPlease
-import CreateAccountDetails
+# import CreateAccountDetails
 
 print("Fill all Details for creating account")
 
