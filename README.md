@@ -31,5 +31,5 @@ python3 Main.py
 
 ## Support
 
-For support, email s.sahildholpuria.com or join our Slack channel.
+For support, email s.sahildholpuria.com.
 
