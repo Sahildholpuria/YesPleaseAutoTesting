@@ -1,6 +1,6 @@
+import pytest
 from webdriver_manager.chrome import ChromeDriverManager
 import time
-
 
 def CreateAccount(FirstName, LastName, PhoneNumber, Email, Password):
     from selenium import webdriver
@@ -36,6 +36,3 @@ def CreateAccount(FirstName, LastName, PhoneNumber, Email, Password):
         "//body/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[2]/div[4]/div[1]/button[1]").click()
     time.sleep(5)
     
-
-
-
