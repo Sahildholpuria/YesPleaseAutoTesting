@@ -28,41 +28,12 @@ def YesPlease(emailAddress, Password):
         "//header/nav[1]/div[3]/div[1]/div[1]/nav[1]/div[2]/ul[1]/div[1]/li[1]/a[1]").click()
     time.sleep(1)
     webdriver.find_element_by_xpath("//a[@id='Onze producten']").click()
-    time.sleep()
+    webdriver.execute_script("window.scrollTo(0,100)")
     for i in range(10):
         webdriver.find_element_by_xpath(
-            "//body/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[4]/center[1]/div[1]/div[3]/i[1]").click()
+            "//body/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[4]/center[1]/div[1]/div[3]").click()
 
-    webdriver.find_element_by_xpath("//body/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/button[1]").click()
+    webdriver.find_element_by_xpath("/html[1]/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/button[1]").click()
     time.sleep(5)
     webdriver.find_element_by_xpath("//a[contains(text(),'AFREKENEN')]").click()
     time.sleep(5)
-
-    
-        
-    
-    
-    # webdriver.find_element_by_xpath(
-    #     "//header/nav[1]/div[3]/div[1]/div[1]/nav[1]/div[2]/ul[1]/div[1]/li[1]/a[1]").click()  # Home Page
-    # time.sleep(1)
-    # webdriver.find_element_by_xpath(
-    #     "/html[1]/body[1]/div[1]/header[1]/nav[1]/div[3]/div[1]/div[1]/nav[1]/div[2]/ul[1]/li[1]/a[1]").click()  # Product Page
-    # time.sleep(1)
-    # webdriver.find_element_by_xpath(
-    #     "//body/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[4]/center[1]/div[1]/div[3]/i[1]").click()  # Add to cart
-    # time.sleep(1)
-    # webdriver.find_element_by_xpath(
-    #     "//body/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/button[1]").click()  # Proceed to checkout
-    # time.sleep(1)
-    # webdriver.find_element_by_xpath(
-    #     "/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[2]/div[2]/div[1]/a[1]").click()  # Checkout
-    # time.sleep(1)
-    # webdriver.find_element_by_xpath(
-    #     "//input[@id='shippingFirstNamedefault']").clear()
-    # webdriver.find_element_by_xpath(
-    #     "//input[@id='shippingLastNamedefault']").clear()
-    # webdriver.find_element_by_xpath(
-    #     "//input[@id='shippingFirstNamedefault']").send_keys("Sahil")
-    # webdriver.find_element_by_xpath(
-    #     "//input[@id='shippingLastNamedefault']").send_keys("Dholpuria")
-    # time.sleep(10)
