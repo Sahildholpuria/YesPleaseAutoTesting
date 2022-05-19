@@ -2,7 +2,7 @@ import pytest
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
-def CreateAccount(FirstName, LastName, PhoneNumber, Email, Password):
+def CreateAccount(FirstName, LastName,PhoneNumber, Email, Password):
     from selenium import webdriver
     webdriver = webdriver.Chrome(ChromeDriverManager().install())
     print("===============YesPlease Create Account===============")
@@ -31,8 +31,8 @@ def CreateAccount(FirstName, LastName, PhoneNumber, Email, Password):
         "//body/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[2]/div[3]/div[1]/div[1]/input[1]").send_keys(Password)  # Password
     webdriver.find_element_by_xpath(
         "//body/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[2]/div[3]/div[2]/div[1]/input[1]").send_keys(Password)  # Confirm Password
-    time.sleep(2)
+    time.sleep(1)
     webdriver.find_element_by_xpath(
         "//body/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[2]/div[4]/div[1]/button[1]").click()
-    time.sleep(5)
+    time.sleep(3)
     
