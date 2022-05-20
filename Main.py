@@ -13,7 +13,7 @@ print("Fill all Details for creating account")
 # emailAddress = str(input("Email Address "))
 # Password = str(input("Password "))
 
-for i in range(10000):
+for i in range(1):
     firstName = fake.first_name()
     lastName = fake.last_name()
     phoneNumber = "0865565656"
@@ -21,5 +21,6 @@ for i in range(10000):
     Password = "Root@123"
 
     CreateAccount.CreateAccount(firstName, lastName,phoneNumber, emailAddress, Password)
+    YesPlease.YesPlease(emailAddress, Password)
   
 # YesPlease.YesPlease(emailAddress,Password)    
