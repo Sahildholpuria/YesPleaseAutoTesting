@@ -16,6 +16,24 @@ def YesPlease(emailAddress, Password):
     AddToCart = "/html[1]/body[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/button[1]"
     CheckOut = "//a[contains(text(),'AFREKENEN')]"
 
+    # Check Out Details
+
+    CheckOutName = "//input[@id='shippingFirstNamedefault']"
+    CheckOutLastName = "//input[@id='shippingLastNamedefault']"
+    CheckOutAddress = "//input[@id='shippingStreetdefault']"
+    CheckOutHouseNumber = "//input[@id='shippingHouseNodefault']"
+    CheckOutPin = "//input[@id='shippingZipCodedefault']"
+    CheckOutResidence = "//input[@id='shippingCitydefault']"
+    CheckOutPhone = "//input[@id='shippingPhoneNumberdefault']"
+    CheckOutEmail = "//input[@id='emaildefault']"
+    CheckOutCountry = "//select[@id='shippingCountrydefault']//option[@id='NL']"
+    CheckOutProvidance = "//select[@id='shippingStatedefault']//option[@id='DR']"
+
+    CardNumber = "//input[@id='rb_ideal']"
+    ExpDate = "//input[@id='rb_ideal']"
+    CVV = "//input[@id='rb_ideal']"
+
+
     from selenium import webdriver
     webdriver = webdriver.Chrome(ChromeDriverManager().install())
     webdriver.get(websiteUrl)
@@ -38,10 +56,37 @@ def YesPlease(emailAddress, Password):
     time.sleep(1)
     webdriver.find_element_by_xpath(ProductCat).click()
     webdriver.execute_script("window.scrollTo(0,100)")
-    for i in range(10):
+    for i in range(5):
         webdriver.find_element_by_xpath(Product).click()
 
     webdriver.find_element_by_xpath(AddToCart).click()
-    time.sleep(5)
+    time.sleep(3)
     webdriver.find_element_by_xpath(CheckOut).click()
-    time.sleep(5)
+    time.sleep(3)
+    webdriver.find_element_by_xpath(CheckOutName).send_keys("Sahil")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CheckOutLastName).send_keys("Kumar")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CheckOutAddress).send_keys("Kamla Nagar")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CheckOutHouseNumber).send_keys("1")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CheckOutPin).send_keys("110012")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CheckOutResidence).send_keys("Delhi")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CheckOutPhone).send_keys("9876543210")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CheckOutEmail).send_keys("")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CheckOutCountry).click()
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CheckOutProvidance).click()
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CardNumber).send_keys("")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(ExpDate).send_keys("")
+    time.sleep(1)
+    webdriver.find_element_by_xpath(CVV).send_keys("")
+    time.sleep(1)
+    webdriver.close()
