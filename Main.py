@@ -16,7 +16,7 @@ for i in range(1):
     Password = fake.password()
 
     CreateAccount.CreateAccount(firstName, lastName,phoneNumber, emailAddress, Password)
-    YesPlease.YesPlease(emailAddress, Password)
+    # YesPlease.YesPlease(emailAddress, Password)
   
 # YesPlease.YesPlease(emailAddress,Password)    
 

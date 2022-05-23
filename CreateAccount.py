@@ -32,6 +32,7 @@ def CreateAccount(FirstName, LastName,PhoneNumber, Email, Password):
     webdriver.find_element_by_xpath(
         "//body/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[2]/div[3]/div[2]/div[1]/input[1]").send_keys(Password)  # Confirm Password
     time.sleep(1)
+    webdriver.save_screenshot("./Screenshot/YesPlease.png")
     webdriver.find_element_by_xpath(
         "//body/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/form[2]/div[4]/div[1]/button[1]").click()
     time.sleep(3)
